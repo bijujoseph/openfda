@@ -1,15 +1,19 @@
 #!/bin/bash
 
-## Create an AWS EC2 instance from Amazon linux AMI (as it has Docker)
-## mkdir /work
+## Create an AWS EC2 instance from Amazon linux AMI and run the following commands in the comments
+
+## sudo mkdir /work && sudo chmod 777 /work
 ## cd /work
-## yum install git
+## sudo yum install -y git
 ## git clone https://github.com/bijujoseph/openfda.git
 ## cd openfda
 ## git checkout -b feature/FDA-13 --track origin/feature/FDA-13
 ## chmod 777 *.sh
 ## ./quickstart.sh
 ##
+
+sudo curl --silent --location https://rpm.nodesource.com/setup | bash -
+
 sudo yum install -y nodejs npm gcc
 cd /tmp && \
   wget https://download.elasticsearch.org/elasticsearch/elasticsearch/elasticsearch-1.7.1.tar.gz && \
