@@ -12,9 +12,15 @@
 ## ./quickstart.sh
 ##
 
-sudo curl --silent --location https://rpm.nodesource.com/setup | bash -
 
+# Step 1 - Install Node.js & NPM
+
+sudo curl --silent --location https://rpm.nodesource.com/setup | bash -
 sudo yum install -y nodejs npm gcc
+
+
+# Step 2 - Install ElasticSearch
+
 cd /tmp && \
   wget https://download.elasticsearch.org/elasticsearch/elasticsearch/elasticsearch-1.7.1.tar.gz && \
   tar xvzf elasticsearch-1.7.1.tar.gz && \
@@ -28,6 +34,15 @@ chmod 777 /elasticsearch/bin/* && \
 sudo mkdir /data0 && sudo chmod 777 /data0/
 cp /work/openfda/deploy/docker/elasticsearch-dev/*.yml /elasticsearch/config/
 cd /work/openfda/
+
+
+#Step 3 - Compile backoffice python & API website
 ./bootstrap.sh
+
+# Step 4 - Start in background API Server
+
+# Step 5 - Start in background EasticSearch Server
+
+# Step 6 - Run all pipelines
 
 
