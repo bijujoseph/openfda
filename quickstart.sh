@@ -22,7 +22,7 @@ cd /tmp && \
 chmod 777 /elasticsearch/bin/* && \
 
 sudo mkdir /data0 && sudo chmod 777 /data0/
-cp /work/openfda/deploy/elasticsearch-dev/*.yml /elasticsearch/config/
+cp /work/openfda/deploy/docker/elasticsearch-dev/*.yml /elasticsearch/config/
 cd /work/openfda/
 ./bootstrap.sh
 
