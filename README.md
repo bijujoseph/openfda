@@ -26,3 +26,4 @@ This repository contains the code which powers the `api.fda.gov/drug/event.json`
 # Packaging
 
 Run `bootstrap.sh` to download and setup a virtualenv for the `openfda` python package and to download and setup the `openfda-api` node package.
+(Note: Only works on Linux OS)
