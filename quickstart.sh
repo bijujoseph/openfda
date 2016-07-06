@@ -77,5 +77,5 @@ nohup ./apiserver.sh > /work/outputs/apiserver.out &
 # --------------------------------
 # Step 6 - Run all pipelines
 # --------------------------------
-ehco 'To run pipelines run the following command : '
+echo 'To run pipelines run the following command : '
 echo './scripts/all-pipelines.sh'

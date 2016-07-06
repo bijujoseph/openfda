@@ -32,7 +32,8 @@ common.shell_cmd('mkdir -p %s', META_DIR)
 SPL_JS = join(RUN_DIR, 'spl/spl_to_json.js')
 LOINC = join(RUN_DIR, 'spl/data/sections.csv')
 
-SPL_S3_BUCKET = 's3://openfda-data-spl/data/'
+#SPL_S3_BUCKET = 's3://openfda-data-spl/data/'
+SPL_S3_BUCKET = 's3://download.open.fda.gov/data/spl'
 SPL_S3_LOCAL_DIR = config.data_dir('spl/s3_sync')
 SPL_S3_CHANGE_LOG = join(SPL_S3_LOCAL_DIR, 'change_log/SPLDocuments.csv')
 SPL_BATCH_DIR = join(META_DIR, 'batch')
