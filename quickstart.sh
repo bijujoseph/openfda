@@ -27,7 +27,8 @@ chmod 777 apiserver.sh
 # --------------------------------
 
 sudo curl --silent --location https://rpm.nodesource.com/setup | bash -
-sudo yum install -y git nodejs npm gcc
+sudo yum install -y git gcc
+sudo yum install -y nodejs npm --enablerepo=epel
 sudo mkdir -p /work && sudo chmod 777 /work && mkdir -p /work/output/
 cd /work
 git clone https://github.com/bijujoseph/openfda.git
