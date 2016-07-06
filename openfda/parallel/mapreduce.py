@@ -70,6 +70,11 @@ class Collection(object):
   that knows how to process them.
   '''
   def __init__(self, filenames_or_glob, mr_input):
+    '''
+    Finds the actual filenames, then run it by the splitter with desired split equivalent to number of CPUs
+    :param filenames_or_glob: If string pattern is passed, then will identify all the files matching the pattern.
+    :param mr_input: The MRInput class, that knows how to split the files.
+    '''
     if not isinstance(filenames_or_glob, list):
       filenames = glob.glob(filenames_or_glob)
     else:

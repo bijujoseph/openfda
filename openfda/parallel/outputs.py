@@ -52,6 +52,9 @@ class LevelDBOutput(MROutput):
       self._last_key = None
 
     def put(self, key, value):
+      '''
+      Stores value in LevelDB in pickle format.
+      '''
       assert isinstance(key, str)
       assert key != self._last_key, (
           'Duplicate keys (%s) passed to LevelDBOutput.'

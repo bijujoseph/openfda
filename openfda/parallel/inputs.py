@@ -32,6 +32,11 @@ class FileSplit(object):
 class MRInput(object):
   class Reader(object):
     def __init__(self, split, **kw):
+      '''
+      A file reader, that reads the chunk represented by the FileSplit
+      :param split: A FileSplit or its subclass
+      :param kw: Options which will be dynamically set on the reader instance
+      '''
       self.filename = split.filename
       self.start_pos = split.start_pos
       self.end_pos = split.end_pos
