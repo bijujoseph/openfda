@@ -37,6 +37,11 @@ cd /work/openfda
 git checkout -b feature/FDA-13 --track origin/feature/FDA-13
 chmod 777 *.sh
 
+sudo add-apt-repository ppa:webupd8team/java
+sudo apt-get update
+echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | sudo /usr/bin/debconf-set-selections
+sudo apt-get install -y oracle-java8-installer
+
 #---------------------------------
 # Step 2 - Install ElasticSearch
 # --------------------------------
@@ -60,6 +65,14 @@ cd /work/openfda/
 #Step 3 - Compile backoffice python & API website
 #------------------------------------------------
 echo 'Step 3 - running bootstrap.sh'
+
+pip install virtualenv
+
+./bootstrap.sh
+
+sudo rm -rf openfda.egg-info/
+sudo rm -rf _python-env/
+
 ./bootstrap.sh
 
 #------------------------------------------------
