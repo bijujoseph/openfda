@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ##
-## Create an AWS EC2 instance from Amazon linux AMI and run the following commands in the comments
+## Create an AWS EC2 instance from Amazon Ubuntu linux AMI and run the following commands in the comments
 ## You can run this on server using the following command:
 ## curl --silent --location https://raw.githubusercontent.com/bijujoseph/openfda/feature/FDA-13/quickstart.sh | bash -
 ##
