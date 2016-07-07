@@ -29,10 +29,6 @@ echo 'Step 1 - Installing the source code and other required softwares'
 
 sudo apt-get update
 sudo apt-get install -y git gcc nodejs npm python-pip libxml2-dev libxslt1-dev python2.7-dev
-sudo add-apt-repository ppa:webupd8team/java
-sudo apt-get update
-echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | sudo /usr/bin/debconf-set-selections
-sudo apt-get install -y oracle-java8-installer
 sudo ln -s /usr/bin/nodejs /usr/sbin/node
 sudo mkdir -p /work && sudo chmod 777 /work && mkdir -p /work/outputs/
 cd /work
